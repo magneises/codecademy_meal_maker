@@ -13,13 +13,13 @@ const menu = {
   // task 6, 7 - Setter method for price
   set price(priceToCheck) {
     if (typeof priceToCheck === "number") {
-      return this._price = priceToCheck;
+      this._price = priceToCheck;
     }
   },
 // task 8, 9, 10, 11 - getter mehtod for todaysSpecial, if...else, and console log
   get todaysSpecial() {
     if(this._meal && this._price) {
-      return `Today's Special is ${this._meal} for ${this._price}!`
+      return `Today's Special is ${this._meal} for $${this._price}.00!`
     } else {
       return 'Meal or price was not set correctly!'
     }
@@ -27,13 +27,8 @@ const menu = {
 
 };
 
-
 menu.meal = "Pizza";
 menu.price = 8;
 
 console.log(menu.todaysSpecial);
-
-
-
-
 
